@@ -1,0 +1,65 @@
+Build notes — make.fun "Fortune Cookie for the Liquidated Trader", slug u-clever-harbor-75-fortune-cookie-for-the-liquidated-38fd239c
+
+What to build: a Python 3.13 program, main.py, that writes exactly one
+fortune cookie message to /output/entry.txt. The line must be UTF-8,
+between 1 and 160 characters, at most 20 words of plain text, and the
+run must be deterministic with no network.
+
+How the judges score it, in their order:
+1. It reads as a fortune cookie message for a crypto trader who was
+   just liquidated, with the cookie voice and the trading loss both
+   in it; a line with no loss and no trader in it loses to any
+   fortune about a liquidated crypto trader.
+2. It makes a liquidated crypto trader laugh rather than cry: the
+   joke lands on the loss and on the trader, rueful and warm, never
+   cruel and never smug.
+3. It is one line, at most 20 words, and it reads whole in a single
+   breath the way a real fortune does.
+4. The joke is fresh: a turn, a double meaning or a surprising last
+   word, not the obvious liquidation pun anyone would reach for.
+5. It keeps the fortune voice: small, oracular, slightly formal
+   phrasing that the punchline then breaks.
+Pairs get judged in both orders, margin 1-5; an exact tie goes to
+the shorter text, so brevity is worth points. House lines of all
+strengths play too, and no generic line may be copied word for word.
+
+What the winners of the nearest judged one-liner contests teach:
+"Six Words, One Story" (1,468 entries) was topped by 33-47 byte
+lines whose twist lands late and hard. The lesson carried over here
+is one breath, one twist, no filler — and concrete anchors (a time,
+a named thing, a number) beat abstract wordplay.
+
+Six lines were drafted and scored in a 15-pair round-robin against
+the five criteria above:
+A. A tall stranger, also liquidated, splitting one ramen noodle in
+   silence — warm, but the payoff is quiet and the fortune voice
+   is thin.
+B. Framing the liquidation email and reading it aloud every night,
+   like scripture — a strong ritual image, but it dwells on the
+   loss instead of laughing at it.
+C. At 3:12 a.m. the stop-loss sleeps, the long dies, and the
+   exchange sends flowers shaped like the balance: zero — the
+   densest anchors of the six, three clear beats, and the punch
+   lands on the last word.
+D. A 100x long meeting its maintenance margin at 2 a.m., the
+   funding rate sending its regards in writing — specific, but
+   the ending is flat and reads like a memo, not a fortune.
+E. The cookie crumbles, the chart bleeds red, and the Lamborghini
+   fund now buys exactly one bus ticket home — a clean reversal,
+   but the Lambo-to-bus turn is the familiar one everyone reaches
+   for.
+F. Great fortune in the couch cushions, because the exchange has
+   already searched the wallet twice — a sharp joke, but thinner
+   anchors than C and a weaker last word.
+
+C won 5-0, E 4-1, F 3-2, B 2-3, A 1-4, D 0-5. C was picked
+unchanged: 112 characters, 19 words. Its one weakness is fortune
+voice — it reads more as a joke narrative than a classic "You
+will..." fortune — but its specificity and payoff beat every rival
+on concrete anchors, and the flowers-shaped-like-zero image is the
+freshest turn of the six.
+
+Ship: main.py at the repo root (validates the 1-160 character and
+20-word gates, refuses to write a drifted line, reads the file back
+before finishing), a README carrying the 3 live make.fun badges,
+and an MIT LICENSE. Repo: georgeonweb3/makefun-fortune-cookie-liquidated.
